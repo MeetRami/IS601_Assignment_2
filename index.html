@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Assignment #2</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="navBar">
+            <ul class="nav_List">
+                <li class="nav_item"><a href="#" onclick="showPage('vcCount')">VC count</a></li>
+                <li class="nav_item"><a href="#" onclick="showPage('palindrome')">Is Palindrome</a></li>
+                <li class="nav_item"><a href="#" onclick="showPage('tipCalc')">Tip Calculator</a></li>
+            </ul>
+        </div>
+        
+        
+        <div id="vcCount" class="page active"> 
+            <h3>Count Vowels & consonants:</h3>
+            <label for="vowelTextInput">Enter Text:</label>
+            <textarea id="vowelTextInput" name="message" placeholder="Write something.." style="height:200px"></textarea>
+            
+            <button onclick="vowelsInString()">Count</button>
+    
+            <div id="vowelOutput"></div> <!-- This is where we will display the output -->
+        </div>
+        
+        <div id="palindrome" class="page">
+            <h3>Is the number a palindrome:</h3>
+            <label for="inputNumber">Enter a number here:</label>
+            <input type="number" id="inputNumber"><br>
+            <button onclick="isPalindrome()">Check</button>
+
+            <div id="numOutput"></div> <!-- This is where we will display the output -->
+        </div>
+        
+        <div id="tipCalc" class="page"> 
+            <h3>Tip Calculator:</h3>
+            <label for="billAmt">Enter bill amount here:</label>
+            <input type="number" id="billAmt"><br><br>
+            <label for="tipPerc">Enter tip amount here: </label>
+            <input type="number" id="tipPerc"><br><br>
+            <button onclick="tipCalculator()">Calculate</button>
+
+            <div id="totalBillValue"></div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
